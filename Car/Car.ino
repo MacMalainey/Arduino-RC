@@ -39,6 +39,10 @@ void Controller(int numBytes){
 		}
 		else{
 			TURN = test;
+			TURN = TURN / 3;
+			if (TURN <= 3){
+				TURN = 4;
+			}
 			Serial.println(TURN);
 			myServo.write(TURN);
 		}
